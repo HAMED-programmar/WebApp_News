@@ -1,0 +1,15 @@
+﻿@font-face {
+    font-family: 'YekanWebFont';
+    src: url('Fonts/BYekan.eot');
+    src: url('Fonts/BYekan.eot?#iefix') format('embedded-opentype'), url('Fonts/BYekan.woff') format('woff'), url('Fonts/BYekan.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'BBNasim';
+    src: url('Fonts/BBNasim.eot');
+    src: url('Fonts/BBNasim.eot?#iefix') format('embedded-opentype'), url('Fonts/BBNasim.woff') format('woff'), url('Fonts/BBNasim.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
