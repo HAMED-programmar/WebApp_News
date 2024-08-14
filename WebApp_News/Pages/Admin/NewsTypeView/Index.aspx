@@ -20,14 +20,14 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
-
+    <br />
+    <br />
      <table id="MyGridView" class="table table-striped table-bordered" >
         <thead>
             <tr>
                 <th>ردیف</th>
                 <th>نوع خبر</th>                  
-           
+                <th>ویرایش</th>
             </tr>
         </thead>
       

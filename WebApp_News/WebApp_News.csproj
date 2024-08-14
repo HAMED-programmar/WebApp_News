@@ -622,6 +622,7 @@
       <LastGenOutput>DBNewsModel.cs</LastGenOutput>
     </Content>
     <Content Include="Pages\Admin\NewsTypeView\Index.aspx" />
+    <Content Include="Pages\Admin\NewsTypeView\Actions.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -658,6 +659,13 @@
     </Compile>
     <Compile Include="Pages\Admin\NewsTypeView\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\NewsTypeView\Actions.aspx.cs">
+      <DependentUpon>Actions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\NewsTypeView\Actions.aspx.designer.cs">
+      <DependentUpon>Actions.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\MastrPage\ActionMastrePage.Master.cs">
       <DependentUpon>ActionMastrePage.Master</DependentUpon>

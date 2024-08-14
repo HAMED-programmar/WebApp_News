@@ -24,8 +24,8 @@ namespace WebApp_News.Pages.Admin.NewsTypeView
             foreach (var nt in Query)
             {
                 strHtml.Append("<tr><td>" + CountRow + "</td>");
-                strHtml.Append("<tr><td>" + nt.Title_NewsType + "</td>");
-
+                strHtml.Append("<td>" + nt.Title_NewsType + "</td>");
+                strHtml.Append("<td> <a href=\"Actions.aspx?ID="+nt.ID_NewsType+"\" class=\"btn btn-info\">  ویرایش </a></tr>");
             }
             BodyTable.Controls.Add(new Literal { Text = strHtml.ToString() });
         }
