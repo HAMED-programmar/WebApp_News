@@ -15,20 +15,13 @@
             $('#MyGridView').DataTable();
         });
 
-          function OpenPage(ID) {
-              window.open("Actions.aspx?ID=" + ID, "mypage", "width=600,height=500,left=400");
-          }
+
       </script>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <br />
-    <a onclick="OpenPage(-1)" class="btn btn-danger">
-        جدید
-    </a>
     <br />
-    <br />
-
      <table id="MyGridView" class="table table-striped table-bordered" >
         <thead>
             <tr>

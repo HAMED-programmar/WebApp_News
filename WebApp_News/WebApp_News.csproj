@@ -623,7 +623,6 @@
     </Content>
     <Content Include="Pages\Admin\NewsTypeView\Index.aspx" />
     <Content Include="Pages\Admin\NewsTypeView\Actions.aspx" />
-    <Content Include="Pages\Error\E404.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
