@@ -16,8 +16,8 @@ namespace WebApp_News.Pages.Admin.NewsTypeView
         private void GetList()
         {
 
-            Models.DBNewsEntities1 dbContext = new Models.DBNewsEntities1();
-            var Query = dbContext.NwesTypes.Select(nt => nt);
+            Models.DBNewsEntities dbContext = new Models.DBNewsEntities();
+            var Query = dbContext.NewsTypes.Select(nt => nt);
             StringBuilder strHtml = new StringBuilder();
             int CountRow = 1;
 
@@ -25,8 +25,10 @@ namespace WebApp_News.Pages.Admin.NewsTypeView
             {
                 strHtml.Append("<tr><td>" + CountRow + "</td>");
                 strHtml.Append("<td>" + nt.Title_NewsType + "</td>");
-                strHtml.Append("<td> <a href=\"Actions.aspx?ID="+nt.ID_NewsType+"\" class=\"btn btn-info\">  ویرایش </a></tr>");
+                strHtml.Append("<td> <a onclick=\"OpenPage("+ nt.ID_NewsType + ")\" class=\"btn btn-info\">  ویرایش </a></tr>");
+                CountRow++;
             }
+
             BodyTable.Controls.Add(new Literal { Text = strHtml.ToString() });
         }
     }

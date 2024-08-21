@@ -611,47 +611,52 @@
     <Content Include="Content\JDataTable\media\js\jquery.js" />
     <Content Include="Content\JS\jquery-1.11.3.min.js" />
     <Content Include="Global.asax" />
-    <Content Include="Models\DBNewsModel.Context.tt">
+    <Content Include="Models\DBNewsModle.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DBNewsModel.edmx</DependentUpon>
-      <LastGenOutput>DBNewsModel.Context.cs</LastGenOutput>
+      <DependentUpon>DBNewsModle.edmx</DependentUpon>
+      <LastGenOutput>DBNewsModle.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\DBNewsModel.tt">
+    <Content Include="Models\DBNewsModle.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DBNewsModel.edmx</DependentUpon>
-      <LastGenOutput>DBNewsModel.cs</LastGenOutput>
+      <DependentUpon>DBNewsModle.edmx</DependentUpon>
+      <LastGenOutput>DBNewsModle.cs</LastGenOutput>
     </Content>
     <Content Include="Pages\Admin\NewsTypeView\Index.aspx" />
     <Content Include="Pages\Admin\NewsTypeView\Actions.aspx" />
+    <Content Include="Pages\Admin\NewView\Action.aspx" />
+    <Content Include="Pages\Admin\NewView\Index.aspx" />
+    <Content Include="Pages\Admin\TBLUser\Action.aspx" />
+    <Content Include="Pages\Admin\TBLUser\Index.aspx" />
+    <Content Include="Pages\Error\E404.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\DBNewsModel.Context.cs">
+    <Compile Include="Models\DBNewsModle.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DBNewsModel.Context.tt</DependentUpon>
+      <DependentUpon>DBNewsModle.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\DBNewsModel.cs">
+    <Compile Include="Models\DBNewsModle.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DBNewsModel.tt</DependentUpon>
+      <DependentUpon>DBNewsModle.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\DBNewsModel.Designer.cs">
+    <Compile Include="Models\DBNewsModle.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DBNewsModel.edmx</DependentUpon>
+      <DependentUpon>DBNewsModle.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\News.cs">
-      <DependentUpon>DBNewsModel.tt</DependentUpon>
+      <DependentUpon>DBNewsModle.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\NwesType.cs">
-      <DependentUpon>DBNewsModel.tt</DependentUpon>
+    <Compile Include="Models\NewsType.cs">
+      <DependentUpon>DBNewsModle.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TblUser.cs">
-      <DependentUpon>DBNewsModel.tt</DependentUpon>
+      <DependentUpon>DBNewsModle.tt</DependentUpon>
     </Compile>
     <Compile Include="Pages\Admin\NewsTypeView\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
@@ -666,6 +671,34 @@
     </Compile>
     <Compile Include="Pages\Admin\NewsTypeView\Actions.aspx.designer.cs">
       <DependentUpon>Actions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\NewView\Action.aspx.cs">
+      <DependentUpon>Action.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\NewView\Action.aspx.designer.cs">
+      <DependentUpon>Action.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\NewView\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\NewView\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\TBLUser\Action.aspx.cs">
+      <DependentUpon>Action.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\TBLUser\Action.aspx.designer.cs">
+      <DependentUpon>Action.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\TBLUser\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\TBLUser\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\MastrPage\ActionMastrePage.Master.cs">
       <DependentUpon>ActionMastrePage.Master</DependentUpon>
@@ -684,12 +717,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="Models\DBNewsModel.edmx">
+    <EntityDeploy Include="Models\DBNewsModle.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DBNewsModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>DBNewsModle.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\DBNewsModel.edmx.diagram">
-      <DependentUpon>DBNewsModel.edmx</DependentUpon>
+    <Content Include="Models\DBNewsModle.edmx.diagram">
+      <DependentUpon>DBNewsModle.edmx</DependentUpon>
     </Content>
     <None Include="packages.config" />
     <Content Include="Pages\MastrPage\AdminMastrpage.Master" />
@@ -704,6 +737,7 @@
   <ItemGroup>
     <Folder Include="App_Source\" />
     <Folder Include="Content\Image\" />
+    <Folder Include="Pages\Admin\PageHelp\" />
     <Folder Include="Pages\Users\" />
   </ItemGroup>
   <ItemGroup>

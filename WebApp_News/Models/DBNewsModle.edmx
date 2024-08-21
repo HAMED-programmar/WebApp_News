@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DBNewsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="News">
+          <Key>
+            <PropertyRef Name="ID_News" />
+          </Key>
+          <Property Name="ID_News" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title_News" Type="nvarchar" MaxLength="250" />
+          <Property Name="SortText" Type="nvarchar(max)" />
+          <Property Name="ID_FK_NewsType" Type="int" />
+        </EntityType>
+        <EntityType Name="NewsType">
+          <Key>
+            <PropertyRef Name="ID_NewsType" />
+          </Key>
+          <Property Name="ID_NewsType" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title_NewsType" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TblUsers">
+          <Key>
+            <PropertyRef Name="ID_User" />
+          </Key>
+          <Property Name="ID_User" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" MaxLength="120" />
+        </EntityType>
+        <EntityContainer Name="DBNewsModelStoreContainer">
+          <EntitySet Name="News" EntityType="Self.News" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NewsType" EntityType="Self.NewsType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblUsers" EntityType="Self.TblUsers" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DBNewsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="News">
+          <Key>
+            <PropertyRef Name="ID_News" />
+          </Key>
+          <Property Name="ID_News" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title_News" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="SortText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ID_FK_NewsType" Type="Int32" />
+        </EntityType>
+        <EntityType Name="NewsType">
+          <Key>
+            <PropertyRef Name="ID_NewsType" />
+          </Key>
+          <Property Name="ID_NewsType" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title_NewsType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TblUser">
+          <Key>
+            <PropertyRef Name="ID_User" />
+          </Key>
+          <Property Name="ID_User" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="DBNewsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="News" EntityType="Self.News" />
+          <EntitySet Name="NewsTypes" EntityType="Self.NewsType" />
+          <EntitySet Name="TblUsers" EntityType="Self.TblUser" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DBNewsModelStoreContainer" CdmEntityContainer="DBNewsEntities">
+          <EntitySetMapping Name="News">
+            <EntityTypeMapping TypeName="DBNewsModel.News">
+              <MappingFragment StoreEntitySet="News">
+                <ScalarProperty Name="ID_News" ColumnName="ID_News" />
+                <ScalarProperty Name="Title_News" ColumnName="Title_News" />
+                <ScalarProperty Name="SortText" ColumnName="SortText" />
+                <ScalarProperty Name="ID_FK_NewsType" ColumnName="ID_FK_NewsType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NewsTypes">
+            <EntityTypeMapping TypeName="DBNewsModel.NewsType">
+              <MappingFragment StoreEntitySet="NewsType">
+                <ScalarProperty Name="ID_NewsType" ColumnName="ID_NewsType" />
+                <ScalarProperty Name="Title_NewsType" ColumnName="Title_NewsType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblUsers">
+            <EntityTypeMapping TypeName="DBNewsModel.TblUser">
+              <MappingFragment StoreEntitySet="TblUsers">
+                <ScalarProperty Name="ID_User" ColumnName="ID_User" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
